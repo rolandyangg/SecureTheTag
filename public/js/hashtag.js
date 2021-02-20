@@ -7,7 +7,7 @@ async function getLabels(imageBytes) {
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
   
-    const fileName = 'public/images/paris.jpg'; // Change to imageBtyes
+    const fileName = imageBytes// 'public/images/paris.jpg'; // Change to imageBtyes
   
     // Performs label detection on the local file
     const [result] = await client.labelDetection(fileName);
@@ -95,6 +95,8 @@ async function getLabels(imageBytes) {
         hashtags = mergeTwo(hashtags, newHashtags);
       }
     }
-    return(hashtags.hashtags.slice(0, 30));
-    // console.log(hashtags.slice(0, 30));
+    // return(hashtags.hashtags.slice(0, 30));
+    console.log(hashtags.slice(0, 30));
   }
+  GOOGLE_APPLICATION_CREDENTIALS='revolution-uc-942ca6c58780.json';
+  getFinalHashtags('public/images/paris.jpg');

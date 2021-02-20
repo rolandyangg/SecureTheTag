@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const multer = require('multer');
+const { getFinalHashtags } = require("./public/js/hashtag");
 const hashtag = require(__dirname + '/public/js/hashtag.js');
 
 const upload = multer({
@@ -13,7 +14,7 @@ const app = express();
 app.set('view engine', 'ejs');
 const port = 80;
 
-app.use(express.static('instagram-hashtag-classifier'));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -24,9 +25,12 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
-app.post('/imageHastags', upload.single('uploadFile'), (req, res) => {
-    console.log(uploadFile);
-});
+app.post('/getImageHashtags', upload.array('myFiles[]'), (req, res) => {
+    console.log(req.files[0].buffer);
+    hashtag.getFinalHashtags(req.files[0].buffer);
+    console.log("Working");
+    res.send("Worked");
+  });
 
 // Turns on the server
 app.listen(port, function(){
