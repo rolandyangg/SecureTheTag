@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "revolution-uc-1613701762691",
+  "private_key_id": "942ca6c587803a4a6f0311d814b8510d56d6a063",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCzraZQ6d4273EB\nSK/LH1mX6KF0PsUJHY7hFYryY19Cbd6KyOmpuWy6/R+PpQ/5uHplRccE4hQnJ2pJ\nDKMXNUV+N6NYSgA0s5E12lU60BGw2BMiCDatdbUaytCjFQhCWbJNBNhoH2/y+6ZI\njqSIfTHV94Xcyvt7OLiXqGI94t1WdfngASzylhoo2aqtn0+Z95IijtEBuH5BuK/k\no83e6dI28NJw0WIIzyo8YNFutMJesvg5HrYEMraMfM+Km7m2hGReIWi6i00oNfW+\nXgI281eRR4YH0Xm/rUQuAVxMygj7+04mo6HHdzgFaz+nD36UsQv7ZnGk6EcNfQRq\ncSr5cUZXAgMBAAECggEAAJEeEIsYiKofAmMTRZLIad064VxvblKAsY/0sbHuX6xT\nil2A22iCQeFWjuogBPfcgRafjdTdt2klFxQx47fOpAi6nfXtzp5IIDzMMoP4ZDkC\nrImrbeuGYteJ6q8h06I9AFcb292SGMBXo8StJ0I6DAYZgq7Q4K1n5WWj1qie89wc\njD5GL9QuXyVdeozVOZj+9qNs+w4zWdsIx5CIL+jkLd86B3zBmGB0Rufy5TawyXW2\nK5tKJgG3OLNEWwWRDFvjjxWsTz6L0wneOA5bXRSlL+TFEBUhpP4w01JhdVbdby5d\npju/47CdgnObVlqEvnjBemCzpP8FXUkfd3V7CRR2wQKBgQDav3ZK5JVRmFTAvFzh\nRWQhknZMziEhDQtQ10bsqUOQPP6J1tv5uNIJ7ewD5nBTeN1y9kyCWRI72Nh+Po4t\nkcSYvkBvgS+zYc+mGJ/3gRjSO5uQ4vKlH7l9VX+PNMhru2aoQgZRfgLOTPH7j8Tq\nDb9wWnEcwQovBd0cxJ4DJOvTRwKBgQDSRujNhwDFY3JVtNp4SsBC6OC9vUWdhPlZ\ned/XHH6lJMddpm3CLZ0J/JPTSTjgYnIaF5/M48ccFo9RaUZqRn4ZTmetrpHvTtud\nkTgZFdPwj/oDp2aoBAhmwaujsozcZjVJDqFJ5+a5LGt+vsujdLI68pIijzQzAdU3\nOsL6cfjccQKBgG8fC+yHqgLFK2itR1F4eqFDUa06mUG86p6qfXEDmzrOgU9sQlrd\nNHWu01I34Z/FqlkYHU2qCcU1JuUaygcEIaamHv2F1sF9UorBv6Fvhzhk52X2o+SV\n9RhiMmaBHb78d+3JfIQxSyOZmuN76UAss69TglplBdNVWzmd99cJDnNJAoGBALhK\niXLIJXbaB7TyAp929DYwH/hrT/4UMu2mkPXY9W4LY+fCG2QZ0g6UnYKKJB0UauhP\nWDCcWT9WzlkNqTcvfQj03I0t+J0CQhxA0Ce8J7oolXhqWOBcWHimuKWJsUbhFUZo\nWheJ9X7JXZUB5zvk5Ogg/M7pL1ic/J+hEo2pIfEhAoGBAM1umZtNfmsocsSn+WDg\n6Fwc6xiED2Ii95IKsUjx4O4Tj8fxQz5L7dGybwPsjJWZEjKmsKyhZ6AgTy715371\ngMebBiL9xOjZXmyFtWPeWmpHeCTDx+gJqHvwDZHlUbqf7ETNwxRhZ3ZCCGsKdvpg\noWxB1HC5jWH5Nx0IL935O3Cw\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-tpuangsk5iqj@revolution-uc-1613701762691.iam.gserviceaccount.com",
+  "client_id": "109541433330179267406",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-tpuangsk5iqj%40revolution-uc-1613701762691.iam.gserviceaccount.com"
+}
