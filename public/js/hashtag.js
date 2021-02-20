@@ -3,9 +3,12 @@ module.exports.getFinalHashtags = getFinalHashtags;
 async function getLabels(imageBytes) {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
-  
+
+    const projectId = 'revolution-uc-1613701762691';
+    const keyFilename = 'revolution-uc-942ca6c58780.json';
+
     // Creates a client
-    const client = new vision.ImageAnnotatorClient();
+    const client = new vision.ImageAnnotatorClient({projectId, keyFilename});
   
     const fileName = imageBytes// 'public/images/paris.jpg'; // Change to imageBtyes
   
@@ -98,5 +101,4 @@ async function getLabels(imageBytes) {
     // return(hashtags.hashtags.slice(0, 30));
     console.log(hashtags.slice(0, 30));
   }
-  GOOGLE_APPLICATION_CREDENTIALS='revolution-uc-942ca6c58780.json';
-  getFinalHashtags('public/images/paris.jpg');
+  // getFinalHashtags('public/images/paris.jpg');
