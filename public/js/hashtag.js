@@ -1,11 +1,13 @@
-async function getLabels() {
+// Module Exports
+module.exports.getFinalHashtags = getFinalHashtags;
+async function getLabels(imageBytes) {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
   
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
   
-    const fileName = 'images/insta-post-lambo.jpeg';
+    const fileName = 'public/images/paris.jpg'; // Change to imageBtyes
   
     // Performs label detection on the local file
     const [result] = await client.labelDetection(fileName);
@@ -83,8 +85,8 @@ async function getLabels() {
     }
   }
   
-  async function main() {
-    var labels = await getLabels();
+  async function getFinalHashtags(imageBytes) {
+    var labels = await getLabels(imageBytes);
     console.log(labels);
     var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
     for (var i = 1; i < 5; i++) {
@@ -93,8 +95,6 @@ async function getLabels() {
         hashtags = mergeTwo(hashtags, newHashtags);
       }
     }
-    console.log(hashtags.slice(0, 30));
+    return(hashtags.hashtags.slice(0, 30));
+    // console.log(hashtags.slice(0, 30));
   }
-  
-  main();
-  
