@@ -1,5 +1,7 @@
+const { get } = require('jquery');
+
 // Module Exports
-module.exports.getFinalHashtags = getFinalHashtags;
+module.exports.getHashtagsFromImage = getHashtagsFromImage;
 /**
  * Takes in imageBytes as parameter and returns array of labels
  */
@@ -19,8 +21,7 @@ async function getLabels(imageBytes) {
     const [result] = await client.labelDetection(fileName);
     const labels = result.labelAnnotations;
     const labelNames = [];
-    // console.log('Labels:');
-    // labels.forEach(label => console.log(label.description));
+
     labels.forEach(label => labelNames.push(label.description));
     return labelNames;
   }
@@ -105,12 +106,2975 @@ async function getLabels(imageBytes) {
          hashtags = mergeTwo(hashtags, newHashtags);
         }
      }
-     return(hashtags.hashtags.slice(0, 30));
+     // console.log(hashtags.slice(0, 30));
+     console.log("Sending results");
+     var data = hashtags.slice(0,30);
+    // console.log(data);
+     return data;
   }
 
   async function getHashtagsFromWord(word) {
     var hashtags = (await getHashtags(word.toLowerCase())).slice(0, 30);
     return hashtags;
   }
-  getHashtagsFromWord('dog');
-  getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');
+
+
+  // getHashtagsFromImage('public/img/MrLim.png');

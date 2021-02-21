@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Get Startet Button */
+/* Get Started Button */
 .get-started-btn {
   margin-left: 25px;
   color: #fff;
@@ -618,6 +618,10 @@ section {
   top: 12px;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #C13584;
+}
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -776,6 +780,7 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+
 .features .icon-box h4 {
   font-size: 20px;
   font-weight: 700;

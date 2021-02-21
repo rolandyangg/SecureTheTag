@@ -2,7 +2,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const multer = require('multer');
-const { getFinalHashtags } = require("./public/js/hashtag");
 const hashtag = require(__dirname + '/public/js/hashtag.js');
 
 const upload = multer({
@@ -26,10 +25,10 @@ app.get("/", function(req, res) {
 });
 
 app.post('/getImageHashtags', upload.array('myFiles[]'), (req, res) => {
-    console.log(req.files[0].buffer);
-    hashtag.getFinalHashtags(req.files[0].buffer);
-    console.log("Working");
-    res.send("Worked");
+    (async () => {
+        var data = await hashtag.getHashtagsFromImage(req.files[0].buffer);
+        res.send(JSON.stringify(data)); // Sends the results
+    })()
   });
 
 // Turns on the server
