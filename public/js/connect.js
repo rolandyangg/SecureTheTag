@@ -47,7 +47,9 @@ form.onsubmit = function(event) {
       type: 'POST', // For jQuery < 1.9
       success: function (data) {
         // Where the magic happens
+        console.log("Data Received");
         var jsondata = JSON.parse(data);
+        console.log(jsondata);
         useData(jsondata);
       }
     });
@@ -55,11 +57,21 @@ form.onsubmit = function(event) {
   }
 
   function useData(data) {
-    /*
+    var htmlData = "";
     for (let i = 0; i < data.length; i++) {
-      console.log(data[i].hashtag);
-    }*/
-    $('#results-container').html("<li>apple</li>");
+      htmlData += 
+        "<li data-aos='fade-up' data-aos-delay='200'><i></i> <a data-toggle='collapse' href='#faq-list-1' class='collapsed'>" +
+        data[i].hashtag +
+        "<i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>" +
+        "<div id='faq-list-1' class='collapse' data-parent='.faq-list'>" +
+        "<li><ul>Posts per Hour: " + data[i].posts_per_hour + "</ul>" +
+        "<li><ul>Total Posts: " + data[i].total_posts + "</ul>" +
+        "<li><ul>Average Likes: " + data[i].average_likes + "</ul>" +
+        "</li>"
+        "</div></li>"
+      // item += ("<li>" + data[i].hashtag + "</li>");
+    }
+    $('#results-container').html(htmlData);
     /*
     <li data-aos="fade-up" data-aos-delay="200">
                             <i></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">#Example <i
