@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>SecureTheTag</title> <!-- Title -->
-    <link rel = "icon" href="img/hashtag.png" type = "image/x-icon"> <!-- Icon -->
+    <link rel="icon" href="img/hashtag.png" type="image/x-icon"> <!-- Icon -->
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -48,11 +48,9 @@
                     <nav class="nav-menu d-none d-lg-block">
                         <ul>
                             <li class="active"><a href="#hero">Home</a></li>
-                            <li><a href="#tagger">Tagger</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#tagger">Tagger</a></li>
                             <li><a href="#team">Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
-
                         </ul>
                     </nav><!-- .nav-menu -->
                     <!---->
@@ -116,7 +114,7 @@
         </section><!-- End About Section -->
 
         <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
+        <section id="features" class="features features-section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -211,35 +209,49 @@
                 </div>
 
                 <div class="row mx-auto">
-
                     <div class="col-6 my-auto">
                         <form id="image-form">
                             <div class="form-row">
-
                                 <div class="col-6">
                                     <input type="file" class="custom-file-input" name="imageInput" accept="image/*"
-                                    id="imageInput" required>
-                                <label class="custom-file-label" for="imageInput">Choose file...</label>
+                                        id="imageInput" required>
+                                    <label class="custom-file-label" for="imageInput">Choose file...</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="submit" class="btn btn-primary" value="Submit" onclick="">
+                                </div>
+                            </div>
+                        </form>
+                        <form id="keyword-form">
+
+
+                            <div class="form-row">
+
+                                <div class="col-6">
+
+                                    <label for="keywordInput">Keyword</label>
+                                    <input type="text" class="form-control" id="keywordInput"
+                                        aria-describedby="keywordHelp" placeholder="Enter keyword" required>
+                                    <small id="keywordHelp" class="form-text text-muted">Be sure to input only one
+                                        keyword</small>
+
                                 </div>
 
                                 <div class="col-6">
                                     <input type="submit" class="btn btn-primary" value="Submit" onclick="">
                                 </div>
-                        
+
+
                             </div>
                         </form>
                     </div>
-
                     <div class="col-6">
                         <div class="image-preview" id="imagePreview">
-                            <img src="http://flxtable.com/wp-content/plugins/pl-platform/engine/ui/images/image-preview.png" alt="" class="image-preview__image rounded mx-auto d-block img-thumbnail img-fluid">
+                            <img src="http://flxtable.com/wp-content/plugins/pl-platform/engine/ui/images/image-preview.png"
+                                alt="" class="image-preview__image rounded mx-auto d-block img-thumbnail img-fluid">
                         </div>
                     </div>
-
                 </div>
-
-            </div>
-
             </div>
         </section><!-- End Hashtag Finder Section -->
 
@@ -256,85 +268,26 @@
                 <div class="faq-list">
                     <ul id="results-container">
                         <li data-aos='fade-up' data-aos-delay='200'>
-                            <i></i> <a data-toggle='collapse' class='collapsed'>#Example <i
-                                    class='bx bx-chevron-down icon-show'></i><i
-                                    class=bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-2" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                    velit laoreet id
-                                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
-                                    pellentesque elit
-                                    ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                </p>
+                            <i></i> <a data-toggle='collapse' href='#faq-list-1' class='collapsed'>Your Hashtags will
+                                appear here...<i class='bx bx-chevron-down icon-show'></i><i class=bx bx-chevron-up
+                                    icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse" data-parent=".faq-list">
+                                <p>Your Hashtag Statistics will appear here...</p>
                             </div>
                         </li>
-
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3"
-                                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
-                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-hash"></i></a>
-                            <div id="faq-list-3" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                    pulvinar elementum
-                                    integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                                    pellentesque eu tincidunt.
-                                    Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                                    sed odio morbi
-                                    quis
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="400">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4"
-                                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
-                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-hash"></i></a>
-                            <div id="faq-list-4" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                    est ante in. Nunc
-                                    vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                                    bibendum est. Purus
-                                    gravida quis blandit turpis cursus in.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="500">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5"
-                                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis
-                                nunc eget lorem
-                                dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-hash"></i></a>
-                            <div id="faq-list-5" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                    integer malesuada
-                                    nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor
-                                    sed. Ut venenatis
-                                    tellus in metus vulputate eu scelerisque.
-                                </p>
-                            </div>
-                        </li>
-
                     </ul>
                 </div>
 
             </div>
         </section><!-- End Frequently Asked Questions Section -->
 
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="testimonials section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>About Us</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                        Quia fugiat sit
-                        in iste officiis commodi quidem hic quas.</p>
+                    <p>We are all Juniors from Bridgewater-Raritan High School!</p>
                 </div>
 
                 <div class="row">
@@ -343,15 +296,15 @@
                         <div class="testimonial-item">
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus.
-                                Accusantium
-                                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                I just recently got into hackathons and I am having a blast! I love to code, and I feel
+                                that I am constantly learning more about coding by participating in hackathons. This
+                                website
+                                has definitely been one of our best hacks yet!
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                             <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                             <h3>Ahaan Limaye</h3>
-                            <h4>Cutest Being On Earth</h4>
+                            <h4>Backend Developer</h4>
                         </div>
                     </div>
 
@@ -367,7 +320,7 @@
                             </p>
                             <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                             <h3>Roland Yang</h3>
-                            <h4>Designer</h4>
+                            <h4>Fullstack Developer</h4>
                         </div>
                     </div>
 
@@ -375,20 +328,18 @@
                         <div class="testimonial-item">
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                duis
-                                minim tempor
-                                labore quem eram duis noster aute amet eram fore quis sint minim.
+                                I am a very cool person!
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                             <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                             <h3>Aryan Pal</h3>
-                            <h4>2nd Cutest Being On Earth</h4>
+                            <h4>Frontend Developer</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </section><!-- End Testimonials Section -->
+        </section>
+        <!-- End Teams Section -->
 
         <!-- ======= Contact Section ======= 
     <section id="contact" class="contact section-bg">

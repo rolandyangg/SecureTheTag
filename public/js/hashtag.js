@@ -2,6 +2,7 @@ const { get } = require('jquery');
 
 // Module Exports
 module.exports.getHashtagsFromImage = getHashtagsFromImage;
+module.exports.getHashtagsFromWord = getHashtagsFromWord;
 /**
  * Takes in imageBytes as parameter and returns array of labels
  */
