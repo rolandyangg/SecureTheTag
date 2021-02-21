@@ -655,12 +655,14 @@ section {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
-  background: linear-gradient(45deg, #990822 0%, #ff0062 100%);
+  background-color: rgba(255, 0, 111, 0.898);
+  /* background: linear-gradient(45deg, #990822 0%, #ff0062 100%); */
   position: relative;
 }
 
 .about .content .read-more:hover {
-  background: linear-gradient(180deg, #990822 0%, #ff0062 100%);
+  background-color: rgba(255, 0, 111, 0.898);
+  /* background: linear-gradient(180deg, #990822 0%, #ff0062 100%); */
 }
 
 .about .content .read-more i {
@@ -716,7 +718,7 @@ section {
 .features .icon-box i {
   font-size: 48px;
   float: left;
-  color: #5846f9;
+  color: #88037d;
 }
 
 .features .icon-box p {
