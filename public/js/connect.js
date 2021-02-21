@@ -10,6 +10,7 @@ inpFile.addEventListener("change", function () {
 
   if (file) {
     const reader = new FileReader();
+    $('#custom-file-label').html(inpFile.value.substring(inpFile.value.lastIndexOf("\\") + 1));
 
     previewImage.style.display = "block";
 
@@ -30,6 +31,8 @@ form.onsubmit = function (event) {
   const file = inpFile.files[0];
 
   event.preventDefault() // stops page from refreshing
+
+  $('#upperfaqlistcontainer').html("<row class='row d-flex justify-content-center'><div class='loader'></div></row>");
 
   console.log("Clicked Submit");
 
@@ -70,6 +73,8 @@ form2.onsubmit = function (event) {
 
   event.preventDefault() // stops page from refreshing
 
+  $('#upperfaqlistcontainer').html("<row class='row d-flex justify-content-center'><div class='loader'></div></row>");
+
   console.log("Clicked Submit");
 
   const xhr = new XMLHttpRequest();
@@ -107,14 +112,14 @@ function useData(data) {
   var htmlData = "";
   for (let i = 0; i < data.length; i++) {
     htmlData +=
-      "<li data-aos='fade-up' data-aos-delay='200'><i></i> <a data-toggle='collapse' href='#faq-list-" + String(i+1) + "' class='collapsed'>" +
+      "<ul id='results-container'><li data-aos='fade-up' data-aos-delay='200'><i></i> <a data-toggle='collapse' href='#faq-list-" + String(i + 1) + "' class='collapsed'>" +
       data[i].hashtag +
       "<i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>" +
-      "<div id='faq-list-" + String(i+1) + "' class='collapse' data-parent='.faq-list'>" +
+      "<div id='faq-list-" + String(i + 1) + "' class='collapse' data-parent='.faq-list'>" +
       "<p>Posts per Hour: " + data[i].posts_per_hour + "</p>" +
       "<p>Total Posts: " + data[i].total_posts + "</p>" +
       "<p>Average Likes: " + data[i].average_likes + "</p>" +
-    "</div></li>"
+      "</div></li></ul?"
   }
-  $('#results-container').html(htmlData);
+  $('#upperfaqlistcontainer').html(htmlData);
 }

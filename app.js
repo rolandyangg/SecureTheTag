@@ -2,7 +2,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const multer = require('multer');
-const { getHashtagsFromWord } = require("./public/js/hashtag");
+const {
+    getHashtagsFromWord
+} = require("./public/js/hashtag");
 const hashtag = require(__dirname + '/public/js/hashtag.js');
 
 const upload = multer({
@@ -20,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Sends the webpage
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     console.log("User requested webpage");
     res.render("index");
 });
@@ -31,7 +33,7 @@ app.post('/getImageHashtags', upload.array('myFiles[]'), (req, res) => {
         res.send(JSON.stringify(data)); // Sends the results
         console.log("Results sent to page!");
     })()
-  });
+});
 
 app.post('/getKeywordHashtags', upload.single("Keyword"), (req, res) => {
     console.log("Keyword passed in: " + req.body.Keyword);
@@ -43,6 +45,6 @@ app.post('/getKeywordHashtags', upload.single("Keyword"), (req, res) => {
 });
 
 // Turns on the server
-app.listen(port, function(){
+app.listen(port, function () {
     console.log("Server has started running on port: " + port);
 });
