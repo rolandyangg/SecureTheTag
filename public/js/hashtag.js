@@ -21,8 +21,8 @@ async function getLabels(imageBytes) {
     labels.forEach(label => labelNames.push(label.description));
     return labelNames;
   }
-  
-  async function getHashtags(keyword) {
+    
+  function getHashtags(keyword) {
     return new Promise((resolve, reject) => {
       var unirest = require("unirest");
       var req = unirest("GET", "https://hashtagy-generate-hashtags.p.rapidapi.com/v1/insta/tags");
@@ -91,14 +91,15 @@ async function getLabels(imageBytes) {
   async function getFinalHashtags(imageBytes) {
     var labels = await getLabels(imageBytes);
     console.log(labels);
-    var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
-    for (var i = 1; i < 5; i++) {
-      if (labels[i].split(' ').length <= 2) {
-        var newHashtags = (await getHashtags(labels[i].toLowerCase())).slice(0, 30);
-        hashtags = mergeTwo(hashtags, newHashtags);
-      }
-    }
+    console.log((await getHashtags(labels[0].toLowerCase())).slice(0, 30));
+    // var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
+    // for (var i = 1; i < 5; i++) {
+    //   if (labels[i].split(' ').length <= 2) {
+    //     var newHashtags = (await getHashtags(labels[i].toLowerCase())).slice(0, 30);
+    //     hashtags = mergeTwo(hashtags, newHashtags);
+    //   }
+    // }
     // return(hashtags.hashtags.slice(0, 30));
-    console.log(hashtags.slice(0, 30));
+    // console.log(hashtags.slice(0, 30));
   }
   // getFinalHashtags('public/images/paris.jpg');
