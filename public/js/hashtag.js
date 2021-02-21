@@ -1,5 +1,8 @@
 // Module Exports
 module.exports.getFinalHashtags = getFinalHashtags;
+/**
+ * Takes in imageBytes as parameter and returns array of labels
+ */
 async function getLabels(imageBytes) {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
@@ -21,7 +24,10 @@ async function getLabels(imageBytes) {
     labels.forEach(label => labelNames.push(label.description));
     return labelNames;
   }
-    
+  
+  /**
+   * Takes in a String keyword and returns an array of hashtags based on that keyword
+   */
   function getHashtags(keyword) {
     return new Promise((resolve, reject) => {
       var unirest = require("unirest");
@@ -88,18 +94,23 @@ async function getLabels(imageBytes) {
     }
   }
   
-  async function getFinalHashtags(imageBytes) {
+  async function getHashtagsFromImage(imageBytes) {
     var labels = await getLabels(imageBytes);
     console.log(labels);
-    console.log((await getHashtags(labels[0].toLowerCase())).slice(0, 30));
-    // var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
-    // for (var i = 1; i < 5; i++) {
-    //   if (labels[i].split(' ').length <= 2) {
-    //     var newHashtags = (await getHashtags(labels[i].toLowerCase())).slice(0, 30);
-    //     hashtags = mergeTwo(hashtags, newHashtags);
-    //   }
-    // }
-    // return(hashtags.hashtags.slice(0, 30));
-    // console.log(hashtags.slice(0, 30));
+    // console.log((await getHashtags(labels[0].toLowerCase())).slice(0, 30));
+    var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
+    for (var i = 1; i < 5; i++) {
+       if (labels[i].split(' ').length <= 2) {
+         var newHashtags = (await getHashtags(labels[i].toLowerCase())).slice(0, 30);
+         hashtags = mergeTwo(hashtags, newHashtags);
+        }
+     }
+     return(hashtags.hashtags.slice(0, 30));
   }
-  // getFinalHashtags('public/images/paris.jpg');
+
+  async function getHashtagsFromWord(word) {
+    var hashtags = (await getHashtags(word.toLowerCase())).slice(0, 30);
+    return hashtags;
+  }
+  getHashtagsFromWord('dog');
+  getHashtagsFromImage('public/img/MrLim.png');
