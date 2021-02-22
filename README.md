@@ -1,6 +1,11 @@
 # SecureTheTag
 *"Achieve the bag by securing them tags!"*
 
+![logo](logo.jpg)
+![home screen](front-page.jpg)
+![example entry](example-entry.jpg)
+![example results](example-results.jpg)
+
 **Revolution UC 2021 Hack**
 
 - A website that reccomends relevant and trending hashtags based on an image that the user wants to post on Instagram.
