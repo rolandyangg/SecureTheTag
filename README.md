@@ -8,7 +8,7 @@
 
 **Revolution UC 2021 Hack**
 
-- A website that reccomends relevant and trending hashtags based on an image that the user wants to post on Instagram.
+- A website that recommends relevant and trending hashtags based on an image that the user wants to post on Instagram.
 
 ## Authors
 - Ahaan Limaye @ahaanlimaye
