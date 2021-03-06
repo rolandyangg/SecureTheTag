@@ -36,7 +36,6 @@ form.onsubmit = function (event) {
 
   console.log("Clicked Submit");
 
-  const xhr = new XMLHttpRequest();
   const formData = new FormData();
 
   for (const file of inpFile.files) {
@@ -77,7 +76,6 @@ form2.onsubmit = function (event) {
 
   console.log("Clicked Submit");
 
-  const xhr = new XMLHttpRequest();
   const formData = new FormData();
 
   formData.append("Keyword", textInput.value);

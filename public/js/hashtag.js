@@ -5,10 +5,8 @@ const {
 // Module Exports
 module.exports.getHashtagsFromImage = getHashtagsFromImage;
 module.exports.getHashtagsFromWord = getHashtagsFromWord;
-/**
- * Takes in imageBytes as parameter and returns array of labels
- */
-async function getLabels(imageBytes) {
+
+async function getLabels(imageBytes) { // Takes in imageBytes as parameter and returns array of labels
   // Imports the Google Cloud client library
   const vision = require('@google-cloud/vision');
 
@@ -21,10 +19,8 @@ async function getLabels(imageBytes) {
     keyFilename
   });
 
-  const fileName = imageBytes // 'public/images/paris.jpg'; // Change to imageBtyes
-
-  // Performs label detection on the local file
-  const [result] = await client.labelDetection(fileName);
+  // Performs label detection on the image
+  const [result] = await client.labelDetection(imageBytes);
   const labels = result.labelAnnotations;
   const labelNames = [];
 
@@ -32,10 +28,7 @@ async function getLabels(imageBytes) {
   return labelNames;
 }
 
-/**
- * Takes in a String keyword and returns an array of hashtags based on that keyword
- */
-function getHashtags(keyword) {
+function getHashtags(keyword) { // Takes in a String keyword and returns an array of hashtag objects based on that keyword
   return new Promise((resolve, reject) => {
     var unirest = require("unirest");
     var req = unirest("GET", "https://hashtagy-generate-hashtags.p.rapidapi.com/v1/insta/tags");
@@ -68,7 +61,7 @@ function getHashtags(keyword) {
   });
 }
 
-function compare(a, b) {
+function compare(a, b) { // Compares objects in hashtag arrays based on posts per hour
   const post1 = a.posts_per_hour;
   const post2 = b.posts_per_hour;
 
@@ -81,7 +74,7 @@ function compare(a, b) {
   return comparison * -1;
 }
 
-function trim(hashtags) {
+function trim(hashtags) { // Trims hashtag objects with no data from hashtag array
   for (i = hashtags.length - 1; i >= 0; i--) {
     if (!('posts_per_hour' in hashtags[i])) {
       hashtags.splice(i, 1);
@@ -89,19 +82,45 @@ function trim(hashtags) {
   }
 }
 
-function mergeTwo(arr1, arr2) {
+function mergeTwo(arr1, arr2) { // Merges two sorted hashtag arrays together
   try {
-    let result = [...arr1, ...arr2];
-    return result.sort(compare);
-  } catch (e) {
+    let idx1 = 0;
+    let idx2 = 0;
+    let result = [];
+    while (idx1 < arr1.length && idx2 < arr2.length) {
+      if (arr1[idx1].posts_per_hour === arr2[idx2].posts_per_hour) {
+        result.push(arr1[idx1]);
+        idx1++;
+        idx2++;
+      }
+      else if (arr1[idx1].posts_per_hour > arr2[idx2].posts_per_hour) {
+        result.push(arr1[idx1])
+        idx1++;
+      }
+      else {
+        result.push(arr2[idx2])
+        idx2++;
+      }
+    }
+    while (idx1 < arr1.length) {
+      result.push(arr1[idx1])
+      idx1++;
+    }
+    while (idx2 < arr2.length) {
+      result.push(arr2[idx2])
+      idx2++;
+    }
+
+    return result;
+  }
+  catch (e) {
     console.log(e);
   }
 }
 
-async function getHashtagsFromImage(imageBytes) {
+async function getHashtagsFromImage(imageBytes) { // Used for Image Query
   var labels = await getLabels(imageBytes);
   console.log(labels);
-  // console.log((await getHashtags(labels[0].toLowerCase())).slice(0, 30));
   var hashtags = (await getHashtags(labels[0].toLowerCase())).slice(0, 30);
   for (var i = 1; i < 5; i++) {
     if (labels[i].split(' ').length <= 2) {
@@ -109,15 +128,11 @@ async function getHashtagsFromImage(imageBytes) {
       hashtags = mergeTwo(hashtags, newHashtags);
     }
   }
-  // console.log(hashtags.slice(0, 30));
   console.log("Sending results");
-  var data = hashtags.slice(0, 30);
-  // console.log(data);
-  return data;
+  return hashtags.slice(0, 30);
 }
 
-async function getHashtagsFromWord(word) {
+async function getHashtagsFromWord(word) { // Used for Keyword Query
   var hashtags = (await getHashtags(word.toLowerCase())).slice(0, 30);
   return hashtags;
 }
-// getHashtagsFromImage('public/img/MrLim.png');
