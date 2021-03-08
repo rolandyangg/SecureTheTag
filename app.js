@@ -45,6 +45,6 @@ app.post('/getKeywordHashtags', upload.single("Keyword"), (req, res) => {
 });
 
 // Turns on the server
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log("Server has started running on port: " + port);
 });
