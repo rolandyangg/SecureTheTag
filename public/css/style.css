@@ -676,7 +676,38 @@ section {
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
-  background-color: #C13584;
+  background-color: rgba(255, 0, 111, 0.898);
+}
+
+.btn-primary, .btn-primary:visited, .btn-primary:active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #fff;
+  background-color: rgba(255, 0, 111, 0.898);
+  /* background: linear-gradient(45deg, rgba(255, 0, 111, 0.898) 0%, rgba(255, 166, 0, 0.885) 100%);  */
+  position: relative;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: rgba(255, 0, 111, 0.898);
+  /* background: linear-gradient(180deg, rgba(255, 0, 111, 0.898) 0%, rgba(255, 166, 0, 0.885) 100%); */
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-primary i {
+  font-size: 22px;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  text-align: center
 }
 
 /*--------------------------------------------------------------
@@ -768,7 +799,7 @@ section {
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
   color: #b1a9fc;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .testimonials .testimonial-item .quote-icon-left {
@@ -781,7 +812,7 @@ section {
   display: inline-block;
   right: -5px;
   position: relative;
-  top: 10px;
+  top: 0px;
 }
 
 .testimonials .testimonial-item p {
@@ -1141,44 +1172,4 @@ section {
 .image-area img {
   z-index: 2;
   position: relative;
-}
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-body {
-  min-height: 100vh;
-  background-color: #757f9a;
-  background-image: linear-gradient(147deg, #757f9a 0%, #d7dde8 100%);
-}
-
-.btn-primary {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  display: inline-block;
-  border-radius: 5px;
-  transition: 0.5s;
-  color: #fff;
-  background-color: rgba(255, 0, 111, 0.898);
-  /* background: linear-gradient(45deg, rgba(255, 0, 111, 0.898) 0%, rgba(255, 166, 0, 0.885) 100%);  */
-  position: relative;
-}
-
-.btn-primary:hover {
-  background: #fff;
-  color: rgba(255, 0, 111, 0.898);
-  /* background: linear-gradient(180deg, rgba(255, 0, 111, 0.898) 0%, rgba(255, 166, 0, 0.885) 100%); */
-}
-
-.btn-primary i {
-  font-size: 22px;
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  text-align: center
 }
