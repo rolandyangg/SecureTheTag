@@ -14,7 +14,7 @@ const upload = multer({
 const app = express();
 
 app.set('view engine', 'ejs');
-const port = 8080;
+const port = 80;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
