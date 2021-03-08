@@ -14,7 +14,7 @@ const upload = multer({
 const app = express();
 
 app.set('view engine', 'ejs');
-const port = 80;
+const port = 8080;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
@@ -45,6 +45,6 @@ app.post('/getKeywordHashtags', upload.single("Keyword"), (req, res) => {
 });
 
 // Turns on the server
-app.listen(process.env.PORT || port, function () {
+app.listen(port, function () {
     console.log("Server has started running on port: " + port);
 });
