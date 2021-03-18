@@ -22,6 +22,7 @@
 - Other: Google Cloud, Hashtagify
 
 ## Webpage
+*DISCLAIMER* Website is currently not working due to API issues, will be fixed ASAP!
 www.securethetag.online
 
 ## Devpost
