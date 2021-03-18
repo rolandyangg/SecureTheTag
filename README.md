@@ -22,7 +22,7 @@
 - Other: Google Cloud, Hashtagify
 
 ## Webpage
-www.securethetag.online (Unfortunately, the website's Hashtag Finder is currently not working due to API issues, will be fixed ASAP)
+www.securethetag.online
 
 ## Devpost
 https://devpost.com/software/securethetag
