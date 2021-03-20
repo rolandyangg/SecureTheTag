@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 
 // Sends the webpage
 app.get("/", function (req, res) {
-    console.log("User requested webpage");
+    console.log(req.url + "@" + Date() + " User connected to the Website");
     res.render("index");
 });
 
