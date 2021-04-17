@@ -14,7 +14,11 @@ const upload = multer({
 const app = express();
 
 app.set('view engine', 'ejs');
+<<<<<<< HEAD
 const port = process.env.PORT || 80;
+=======
+const port = 80;
+>>>>>>> upstream/main
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
@@ -23,7 +27,7 @@ app.use(bodyParser.urlencoded({
 
 // Sends the webpage
 app.get("/", function (req, res) {
-    console.log("User requested webpage");
+    console.log(req.url + "@" + Date() + " User connected to the Website");
     res.render("index");
 });
 
