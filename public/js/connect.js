@@ -111,12 +111,10 @@ function useData(data) {
   for (let i = 0; i < data.length; i++) {
     htmlData +=
       "<ul id='results-container'><li data-aos='fade-up' data-aos-delay='200'><i></i> <a data-toggle='collapse' href='#faq-list-" + String(i + 1) + "' class='collapsed'>" +
-      data[i].hashtag +
+      "#" + data[i].name +
       "<i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>" +
       "<div id='faq-list-" + String(i + 1) + "' class='collapse' data-parent='.faq-list'>" +
-      "<p>Posts per Hour: " + data[i].posts_per_hour + "</p>" +
-      "<p>Total Posts: " + data[i].total_posts + "</p>" +
-      "<p>Average Likes: " + data[i].average_likes + "</p>" +
+      "<p>" + data[i].search_result_subtitle + "</p>" +
       "</div></li></ul?"
   }
   $('#upperfaqlistcontainer').html(htmlData);
