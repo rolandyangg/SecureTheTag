@@ -27,7 +27,7 @@ www.securethetag.online
 ## Devpost
 https://devpost.com/software/securethetag
 
-## Awards at GunnHacks 7.0
+## Awards at RevolutionUC 2021
 - 1st Place Overall
 - Best use of Google Cloud (MLH)
 - Best Design Hack
